@@ -1,0 +1,17 @@
+@import "../../../../assets/styles/variables.scss";
+
+.copyrights {
+  &__wrapper {
+    background-color: $dark-color;
+    padding: 12px;
+    text-align: center;
+    .container {
+      color: $color-light;
+      font-size: 14px;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+      font-family: "Inter", sans-serif;
+    }
+  }
+}

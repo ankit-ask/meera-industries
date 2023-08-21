@@ -1,0 +1,181 @@
+<div class="container">
+  <app-hero-banner></app-hero-banner>
+
+  <div class="banner">
+    <div class="banner__item--wrapper col-lg-6">
+      <div class="banner__item">
+        <div class="banner__item--media">
+          <img
+            [src]="false ? '' : 'assets/images/dummy-product-01.png'"
+            alt="Banner Image"
+          />
+        </div>
+        <div class="banner__item--info horizontal">
+          <div class="banner__item--info-left">
+            <div class="banner__item--info-title">
+              {{ "" || "Marketing Message Here" | titlecase }}
+            </div>
+            <div class="banner__item--info-description">
+              {{
+                "" ||
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+                  | titlecase
+              }}
+            </div>
+          </div>
+          <div class="banner__item--info-right">
+            <span>Shop Now</span>
+            <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner__item--wrapper middle col-lg-3">
+      <div class="banner__item">
+        <div class="banner__item--media">
+          <img
+            [src]="false ? '' : 'assets/images/dummy-product-02.png'"
+            alt="Banner Image"
+          />
+          <!-- <img src="assets/images/dummy-product-02.png" alt="Baner Image" /> -->
+        </div>
+        <div class="banner__item--info">
+          <div class="banner__item--info-left">
+            <div class="banner__item--info-title">
+              {{ "Test" || "Upto 50% Off" | titlecase }}
+            </div>
+          </div>
+          <div class="banner__item--info-right">
+            <span>Shop Now</span>
+            <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner__item--wrapper last col-lg-3">
+      <div class="banner__item">
+        <div class="banner__item--media">
+          <img src="assets/images/dummy-product-03.png" alt="Baner Image" />
+        </div>
+        <div class="banner__item--info">
+          <div class="banner__item--info-left">
+            <div class="banner__item--info-title">Upto 50% Off</div>
+          </div>
+          <div class="banner__item--info-right">
+            <span>Shop Now</span>
+            <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bestseller">
+    <div class="bestseller__header">
+      <div class="bestseller__header--title">Shop Best Seller</div>
+      <div class="bestseller__header--action">
+        <span>Show All</span>
+        <img src="assets/icons/arrow_right_purple.png" alt="Arrow Right Icon" />
+      </div>
+    </div>
+    <div class="bestseller__list">
+      <div
+        class="bestseller__item col-sm-6 col-md-4 col-lg-3"
+        *ngFor="let item of [].constructor(4)"
+      >
+        <app-item-card></app-item-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="category__wrapper">
+    <div class="category__header">Shop By Category</div>
+    <div class="category__list">
+      <div class="category__item first">
+        <div class="category__item--label">All New Arrivals</div>
+        <div class="category__item--action">
+          <span>Discover</span>
+          <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
+        </div>
+      </div>
+      <div
+        class="category__item"
+        *ngFor="let item of [].constructor(5); index as i"
+      >
+        <div class="category__item--media">
+          <img src="assets/images/dummy-product-03.png" alt="Category Image" />
+        </div>
+        <div class="category__item--title">
+          <span> Category {{ i + 1 }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-offer-banner
+    [title]="'Marketing Message Here'"
+    [mediaURL]="'assets/images/dummy-product-04.png'"
+    [description]="
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.'
+    "
+    [ctaLabel]="'Shop Now'"
+    [ctaType]="'LINK'"
+    [bgColor]="'blue'"
+  ></app-offer-banner> -->
+
+<div class="container">
+  <div class="top-picks">
+    <div class="top-picks__header">
+      <div class="top-picks__header--title">Picks for you</div>
+      <div class="top-picks__header--action">
+        <span>Show All</span>
+        <img src="assets/icons/arrow_right_purple.png" alt="Arrow Right Icon" />
+      </div>
+    </div>
+    <div class="top-picks__list">
+      <div
+        class="top-picks__item--wrapper col-sm-6 col-md-6 col-lg-3"
+        *ngFor="let item of [].constructor(4)"
+      >
+        <div class="top-picks__item">
+          <app-item-card></app-item-card>
+        </div>
+      </div>
+    </div>
+    <div class="top-picks__list">
+      <div
+        class="top-picks__item--wrapper col-sm-6 col-md-6 col-lg-3"
+        *ngFor="let item of [].constructor(4)"
+      >
+        <div class="top-picks__item">
+          <app-item-card></app-item-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service__wrapper">
+    <div class="service__header">What We Offer</div>
+
+    <div class="service__list">
+      <div
+        class="service__item--wrapper col-sm-6 col-md-6 col-lg-3"
+        *ngFor="let item of [].constructor(4)"
+      >
+        <div class="service__item">
+          <div class="service__item--icon">
+            <img src="assets/icons/shipping.png" alt="Service Icon" />
+          </div>
+          <div class="service__item--title">Payment Methods</div>
+          <div class="service__item--description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

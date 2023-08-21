@@ -1,0 +1,120 @@
+@import "../../../../assets/styles/variables.scss";
+
+.banner {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    border-radius: 4px;
+    &.blue {
+      background-color: #edf4ff;
+    }
+    &.grey {
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 0, 0, 0.1) 100%
+      );
+      // background: linear-gradient(269.92deg, #ffffff -21.92%, #dcd8d8 99.91%);
+    }
+    &.dark {
+      background: #0e2457;
+      .banner__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: 60px;
+        &--title {
+          color: $color-light;
+        }
+        &--subtitle {
+          color: #ececec;
+        }
+        &--description {
+          color: #f4f4f4;
+          text-align: center;
+        }
+        button {
+          background-color: $color-light;
+        }
+      }
+      // .banner__info--title {
+      //   color: $color-light;
+      // }
+      // .banner__info--subtitle {
+      //   color: #ececec;
+      // }
+      // .banner__info--description {
+      //   color: #f4f4f4;
+      //   text-align: center;
+      // }
+      // button {
+      //   background-color: $color-light;
+      // }
+    }
+  }
+  &__info {
+    width: 50%;
+    padding: 20px 80px;
+    &--title {
+      font-size: 36px;
+    }
+    &--subtitle {
+      font-size: 16px;
+      color: #737373;
+    }
+    &--description {
+      font-size: 16px;
+      padding: 12px 0 24px;
+      color: #414141;
+    }
+    &--action-button {
+      justify-content: center;
+    }
+    &--action {
+      display: flex;
+      align-items: center;
+      min-width: 144px;
+      button {
+        padding: 10px 22px;
+        background-color: $color-dark;
+      }
+      span {
+        font-size: 24px;
+        padding-right: 8px;
+      }
+      img {
+        width: 24px;
+      }
+    }
+  }
+  &__media {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+  .banner {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__info {
+      width: 100%;
+      padding: 16px;
+    }
+    &__media {
+      width: 100%;
+    }
+  }
+}

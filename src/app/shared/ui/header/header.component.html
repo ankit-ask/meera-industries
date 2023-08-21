@@ -1,0 +1,61 @@
+<div class="header__wrapper">
+  <div class="container">
+    <div>
+      <div class="header__brand" routerLink="/">
+        <img src="assets/images/logo.png" alt="Brand Logo" />
+      </div>
+      <!-- <div class="header__search desktop-only">
+          <img src="assets/icons/search.png" alt="Search Icon" />
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search"
+            (keydown.enter)="searchProducts($event)"
+          />
+        </div> -->
+      <div class="header__action">
+        <div
+          class="header__action--item c-pointer"
+          *ngFor="let menuItem of menuItems"
+          [routerLink]="menuItem.url"
+          [routerLinkActive]="'active'"
+        >
+          <!-- <img src="assets/icons/user.png" alt="User Icon" /> -->
+          <span>{{ menuItem.title }}</span>
+        </div>
+
+        <!-- <div ngbDropdown class="d-inline-block">
+          <div class="header__action--item c-pointer" ngbDropdownToggle>
+            <img src="assets/icons/user.png" alt="User Icon" />
+            <span>Admin</span>
+          </div>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem routerLink="/account/profile/settings">
+              My Profile
+            </button>
+            <button ngbDropdownItem>Logout</button>
+          </div>
+        </div> -->
+
+        <!-- <div class="header__action--item c-pointer">
+          <img src="assets/icons/heart.png" alt="Heart Icon" />
+        </div>
+        <div class="header__action--item c-pointer bag" routerLink="/cart">
+          <img src="assets/icons/bag.png" alt="Bag icon" />
+          <span>2</span>
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="mobile-only">
+        <div class="header__search">
+          <img src="assets/icons/search.png" alt="Search Icon" />
+          <input
+            type="search"
+            class="form-control"
+            placeholder="Search"
+            (keydown.enter)="searchProducts($event)"
+          />
+        </div>
+      </div> -->
+  </div>
+</div>
