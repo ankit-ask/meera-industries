@@ -1,1 +1,61 @@
-<p>contact works!</p>
+<div style="height: 100vh">
+  <div class="mx-5 my-2">User Input: {{ userInput }}</div>
+  <div class="mx-5 my-2">
+    <button class="btn btn-outline-dark" (click)="startGame()">
+      Start Game
+    </button>
+  </div>
+  <div class="d-flex mx-5 mb-5" style="gap: 16px">
+    <button class="btn btn-primary" (click)="setInput('B')">BANKER</button>
+    <button class="btn btn-success" (click)="setInput('P')">PLAYER</button>
+    <button class="btn btn-dark" (click)="setInput('T')">TIE</button>
+
+    <button class="btn btn-danger" (click)="reset()">NEW GAME</button>
+  </div>
+  <div class="mx-5 my-2">
+    Prediction: {{ nextOutcome }} | Token: {{ token }}
+  </div>
+  <div class="mx-5 my-2">Accumulated Win/Loss: {{ accumulatedWinLoss }}</div>
+  <div class="mx-5 my-2">
+    Token History:
+    <span *ngFor="let item of tokenHistory">
+      {{ item }}
+    </span>
+  </div>
+  <div class="mx-5 my-2">Token Stategy: {{ tokenStrategy }}</div>
+  <div class="mx-5 my-2">
+    Acutal Outcomes History:
+    <span *ngFor="let item of actualOutcomes">
+      {{ item }}
+    </span>
+  </div>
+  <div class="mx-5 my-2">
+    Predictions Data:
+    <span *ngFor="let item of predictions">
+      {{ item }}
+    </span>
+  </div>
+
+  <div class="mx-5 my-2">
+    <table class="table table-striped">
+      <thead>
+        <th>Round of Play</th>
+        <th>Observed/Actual Decision</th>
+        <th>Pattern Followed</th>
+        <th>Predicted Decision</th>
+        <th>Outcome</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let actualItem of actualOutcomes; index as i">
+          <td>{{ i }}</td>
+          <td>{{ actualItem }}</td>
+          <td>{{ patterns[i] }}</td>
+          <td>{{ predictions[i] }}</td>
+          <td>
+            {{ i ? (predictions[i] === actualItem ? "W" : "L") : "-" }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
