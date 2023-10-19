@@ -1,6 +1,6 @@
 <div class="item-card__wrapper">
   <div class="item-card">
-    <div class="item-card__favorite">
+    <div class="item-card__favorite" *ngIf="false">
       <img src="assets/icons/heart-dark.png" alt="" />
     </div>
     <div class="item-card__media c-pointer" (click)="goToProductDetails()">
@@ -10,31 +10,30 @@
         </div> -->
       <img
         [src]="
-          product.media[0]
-            ? product.media[0]
-            : 'assets/images/no-product-image.png'
+          product?.media ? product?.media : 'assets/images/no-product-image.png'
         "
         onerror="this.onerror=null; this.src='assets/images/no-product-image.png'"
         alt="Product Image"
       />
     </div>
     <div class="item-card__info c-pointer" (click)="goToProductDetails()">
-      <div class="item-card__info--title" [title]="product.name">
-        {{ product.name || "Test Product Name" }}
+      <div class="item-card__info--title" [title]="product?.name">
+        {{ product?.name || "Test Product Name" }}
       </div>
-      <div class="item-card__info--description" [title]="product.description">
-        {{ product.description || "This is a test description" }}
+      <div class="item-card__info--description" [title]="product?.description">
+        {{ product?.description || "This is a test description" }}
       </div>
       <div class="item-card__info--price">
-        <span>₹{{ product.price || "99" }}</span>
-        {{ product.price || "89" }}
+        <!-- <span>₹{{ product?.price || "99" }}</span>
+        {{ product?.price || "89" }} -->
+        <button class="btn btn-primary btn-dark">Get Price</button>
       </div>
     </div>
     <div class="item-card__colors">
-      <div
+      <!-- <div
         class="item-card__colors--item"
         *ngFor="let item of [].constructor(3)"
-      ></div>
+      ></div> -->
     </div>
   </div>
 </div>

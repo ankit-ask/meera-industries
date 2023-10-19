@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-card',
@@ -6,12 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./item-card.component.scss'],
 })
 export class ItemCardComponent {
-  product = {
-    name: 'Test Product',
-    description: 'This is a test product',
-    media: ['assets/images/no-product-image.png'],
-    price: 120.0,
-  };
+  @Input() product: any;
+  // product = {
+  //   name: 'Test Product',
+  //   description: 'This is a test product',
+  //   media: ['assets/images/no-product-image.png'],
+  //   price: 120.0,
+  // };
 
   goToProductDetails() {}
 }

@@ -1,61 +1,99 @@
-<div style="height: 100vh">
-  <div class="mx-5 my-2">User Input: {{ userInput }}</div>
-  <div class="mx-5 my-2">
-    <button class="btn btn-outline-dark" (click)="startGame()">
-      Start Game
-    </button>
-  </div>
-  <div class="d-flex mx-5 mb-5" style="gap: 16px">
-    <button class="btn btn-primary" (click)="setInput('B')">BANKER</button>
-    <button class="btn btn-success" (click)="setInput('P')">PLAYER</button>
-    <button class="btn btn-dark" (click)="setInput('T')">TIE</button>
+<!-- <app-header-top-strip></app-header-top-strip>
+<app-header></app-header> -->
+<div class="container">
+  <!-- <app-header-categories></app-header-categories> -->
 
-    <button class="btn btn-danger" (click)="reset()">NEW GAME</button>
-  </div>
-  <div class="mx-5 my-2">
-    Prediction: {{ nextOutcome }} | Token: {{ token }}
-  </div>
-  <div class="mx-5 my-2">Accumulated Win/Loss: {{ accumulatedWinLoss }}</div>
-  <div class="mx-5 my-2">
-    Token History:
-    <span *ngFor="let item of tokenHistory">
-      {{ item }}
-    </span>
-  </div>
-  <div class="mx-5 my-2">Token Stategy: {{ tokenStrategy }}</div>
-  <div class="mx-5 my-2">
-    Acutal Outcomes History:
-    <span *ngFor="let item of actualOutcomes">
-      {{ item }}
-    </span>
-  </div>
-  <div class="mx-5 my-2">
-    Predictions Data:
-    <span *ngFor="let item of predictions">
-      {{ item }}
-    </span>
+  <!-- <app-breadcrumb
+    [inactiveElements]="['Home']"
+    [activeElement]="'Contact Us'"
+  ></app-breadcrumb> -->
+
+  <div class="page-title__wrapper">
+    <div class="page-title__heading">Contact Us</div>
+    <div class="page-title__description">
+      Got any question or need help with ordering? We're here to help you!
+    </div>
   </div>
 
-  <div class="mx-5 my-2">
-    <table class="table table-striped">
-      <thead>
-        <th>Round of Play</th>
-        <th>Observed/Actual Decision</th>
-        <th>Pattern Followed</th>
-        <th>Predicted Decision</th>
-        <th>Outcome</th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let actualItem of actualOutcomes; index as i">
-          <td>{{ i }}</td>
-          <td>{{ actualItem }}</td>
-          <td>{{ patterns[i] }}</td>
-          <td>{{ predictions[i] }}</td>
-          <td>
-            {{ i ? (predictions[i] === actualItem ? "W" : "L") : "-" }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="contact__wrapper">
+    <div class="contact__main">
+      <div class="contact__main--header">Get in touch with us!</div>
+      <div class="contact__main--item-grp">
+        <div class="contact__main--item">
+          <label>First Name</label>
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+        <div class="contact__main--item">
+          <label>Last Name</label>
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+      </div>
+      <div class="contact__main--item-grp">
+        <div class="contact__main--item">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="" />
+        </div>
+        <div class="contact__main--item">
+          <label>Phone Number</label>
+          <input type="tel" class="form-control" placeholder="" />
+        </div>
+      </div>
+      <div class="contact__main--item-grp">
+        <div class="contact__main--item message">
+          <label>Your message</label>
+          <textarea
+            rows="3"
+            class="form-control"
+            placeholder="Your query here"
+          ></textarea>
+        </div>
+      </div>
+      <div class="contact__main--footer">
+        <div class="contact__main--footer-coupon"></div>
+        <div class="contact__main--footer-shopping">
+          <button class="btn btn-dark">Send Message</button>
+        </div>
+      </div>
+      <!-- <img src="assets/images/dummy-product-03.png" alt=""> -->
+    </div>
+    <div class="contact__info">
+      <div class="contact__info--header">Contact Details</div>
+      <div class="contact__info--item">
+        <div class="contact__info--item-label">Address</div>
+        <div class="contact__info--item-value">
+          258, Sawer Road, Sector D, Village Sukhliya, Indore
+        </div>
+      </div>
+      <div class="contact__info--item">
+        <div class="contact__info--item-label">Phone</div>
+        <div class="contact__info--item-value">
+          +91-9977403008 | +91-9826664567
+        </div>
+      </div>
+      <div class="contact__info--item">
+        <div class="contact__info--item-label">Email</div>
+        <div class="contact__info--item-value">industriesmeera@gmail.com</div>
+      </div>
+      <div class="contact__info--item">
+        <div class="contact__info--item-label">Timings</div>
+        <div class="contact__info--item-value">
+          8:00AM - 10:00PM, Sunday Close
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<app-offer-banner
+  [title]="'Marketing Message Here'"
+  [mediaURL]="'assets/images/dummy-product-04.png'"
+  [description]="
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.'
+  "
+  [ctaLabel]="'Shop Now'"
+  [ctaType]="'LINK'"
+  [bgColor]="'blue'"
+></app-offer-banner>
+
+<!-- <app-footer></app-footer>
+<app-footer-copyright-strip></app-footer-copyright-strip> -->

@@ -19,7 +19,11 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: 'products/:categoryId',
+    path: 'about',
+    component: ContactComponent,
+  },
+  {
+    path: 'products/:category',
     component: ProductListComponent,
   },
 ];

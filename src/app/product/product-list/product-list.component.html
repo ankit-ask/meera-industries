@@ -11,14 +11,14 @@
   <div class="category__wrapper">
     <div class="category__header">
       <div class="category__header--info">
-        <div class="category__header--info-title">All Categories</div>
+        <div class="category__header--info-title">
+          {{ categoryTitle[categoryIndex] }}
+        </div>
         <div class="category__header--info-description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-          ipsum dolor sit amet, consectetu
+          {{ categorySubtitle[categoryIndex] }}
         </div>
       </div>
-      <div class="category__header--search-wrapper">
+      <div class="category__header--search-wrapper" *ngIf="false">
         <div class="category__header--search">
           <img src="assets/icons/search-dark.png" alt="Search Icon" />
           <input
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="category__list">
+    <div class="category__list" *ngIf="false">
       <div class="category__item first">
         <div class="category__item--label">All Categories</div>
         <div class="category__item--action">
@@ -95,51 +95,56 @@
   </div>
 
   <app-offer-banner
-    [title]="'Category Name'"
-    [subtitle]="'CAPTION HERE'"
+    [title]="'Wide range of ' + categoryTitle[categoryIndex]"
+    [subtitle]="''"
     [mediaURL]="'assets/images/dummy-product-04.png'"
-    [description]="
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu'
-    "
-    [ctaLabel]="'Shop Now'"
-    [ctaType]="'BUTTON'"
+    [description]="categorySubtitle[categoryIndex]"
+    [ctaLabel]="''"
+    [ctaType]="''"
     [bgColor]="'grey'"
   ></app-offer-banner>
 
-  <div class="bestseller">
-    <!-- <div class="bestseller__header">
-        <div class="bestseller__header--title">Shop Best Seller</div>
-        <div class="bestseller__header--action">
+  <ng-container *ngFor="let subCategory of products[categoryIndex]">
+    <div class="bestseller">
+      <div
+        class="bestseller__header"
+        *ngIf="subCategory.subCategory !== 'Default'"
+      >
+        <div class="bestseller__header--title">
+          {{ subCategory.subCategory }}
+        </div>
+        <!-- <div class="bestseller__header--action">
           <span>Show All</span>
           <img
             src="assets/icons/arrow_right_purple.png"
             alt="Arrow Right Icon"
           />
+        </div> -->
+      </div>
+      <div class="bestseller__list">
+        <div
+          class="bestseller__item--wrapper col-sm-6 col-md-4 col-lg-4"
+          *ngFor="let product of subCategory.items"
+        >
+          <div class="bestseller__item">
+            <!-- <app-item-card></app-item-card> -->
+            <app-item-card [product]="product"></app-item-card>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="bestseller__footer">
+        <div class="bestseller__footer--action">
+          <span>View All</span>
+          <img
+            src="assets/icons/chevron-right-dark.png"
+            alt="Chevron Right Icon"
+          />
         </div>
       </div> -->
-    <div class="bestseller__list">
-      <div
-        class="bestseller__item--wrapper col-sm-6 col-md-4 col-lg-3"
-        *ngFor="let product of [].constructor(5)"
-      >
-        <div class="bestseller__item">
-          <app-item-card></app-item-card>
-          <!-- <app-item-card [product]="product"></app-item-card> -->
-        </div>
-      </div>
     </div>
-    <div class="bestseller__footer">
-      <div class="bestseller__footer--action">
-        <span>View All</span>
-        <img
-          src="assets/icons/chevron-right-dark.png"
-          alt="Chevron Right Icon"
-        />
-      </div>
-    </div>
-  </div>
+  </ng-container>
 
-  <div class="category-pop">
+  <!-- <div class="category-pop">
     <div class="category-pop__item" *ngFor="let item of [].constructor(2)">
       <div class="category-pop__item--info">
         <div class="category-pop__item--info-title">Featured Item</div>
@@ -152,10 +157,10 @@
         <img src="assets/images/dummy-product-05.png" alt="Category Image" />
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div class="bestseller">
-    <!-- <div class="bestseller__header">
+  <!-- <div class="bestseller">
+    <div class="bestseller__header">
         <div class="bestseller__header--title">Shop Best Seller</div>
         <div class="bestseller__header--action">
           <span>Show All</span>
@@ -164,10 +169,10 @@
             alt="Arrow Right Icon"
           />
         </div>
-      </div> -->
+      </div>
     <div class="bestseller__list">
       <div
-        class="bestseller__item--wrapper col-sm-6 col-md-4 col-lg-3"
+        class="bestseller__item--wrapper col-sm-6 col-md-4 col-lg-4"
         *ngFor="let item of [].constructor(4)"
       >
         <div class="bestseller__item">
@@ -184,7 +189,7 @@
         />
       </div>
     </div>
-  </div>
+  </div> -->
 
   <app-offer-banner
     [subtitle]="'CAPTION HERE'"
@@ -197,8 +202,8 @@
     [bgColor]="'dark'"
   ></app-offer-banner>
 
-  <div class="bestseller">
-    <!-- <div class="bestseller__header">
+  <!-- <div class="bestseller">
+    <div class="bestseller__header">
         <div class="bestseller__header--title">Shop Best Seller</div>
         <div class="bestseller__header--action">
           <span>Show All</span>
@@ -207,7 +212,7 @@
             alt="Arrow Right Icon"
           />
         </div>
-      </div> -->
+      </div>
     <div class="bestseller__list">
       <div
         class="bestseller__item--wrapper col-sm-6 col-md-4 col-lg-3"
@@ -227,10 +232,10 @@
         />
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
 
-<app-offer-banner
+<!-- <app-offer-banner
   [title]="'Marketing Message Here'"
   [mediaURL]="'assets/images/dummy-product-04.png'"
   [description]="
@@ -239,7 +244,7 @@
   [ctaLabel]="'Shop Now'"
   [ctaType]="'LINK'"
   [bgColor]="'blue'"
-></app-offer-banner>
+></app-offer-banner> -->
 
 <!-- <app-footer></app-footer>
   <app-footer-copyright-strip></app-footer-copyright-strip> -->

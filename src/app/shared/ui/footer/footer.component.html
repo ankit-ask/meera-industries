@@ -10,11 +10,11 @@
             <img src="assets/icons/map.png" alt="Map Icon" />
           </div>
           <div class="footer__info--text">
-            <div>3131 Western Ave, Suite 527,</div>
-            <div>Seattle, WA 98121</div>
+            <div>258, Sawer Road, Sector D</div>
+            <div>Village Sukhliya, Indore</div>
           </div>
         </div>
-        <div class="footer__info">
+        <!-- <div class="footer__info">
           <div class="footer__info--icon">
             <img src="assets/icons/map.png" alt="Map Icon" />
           </div>
@@ -22,14 +22,14 @@
             <div>3131 Western Ave, Suite 527,</div>
             <div>Seattle, WA 98121</div>
           </div>
-        </div>
+        </div> -->
         <div class="footer__info">
           <div class="footer__info--icon">
             <img src="assets/icons/call.png" alt="Call Icon" />
           </div>
           <div class="footer__info--text">
-            <div>126-632-2345</div>
-            <div>username@xyz.com</div>
+            <div>+91-9977403008 | +91-9826664567</div>
+            <div>industriesmeera@gmail.com</div>
           </div>
         </div>
       </div>
@@ -37,37 +37,52 @@
       <div class="footer__middle">
         <div class="footer__link">
           <div class="footer__link--grp">
-            <div class="footer__link--title">Important</div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
-          </div>
-          <div class="footer__link--grp">
             <div class="footer__link--title">Quick Links</div>
-            <div class="footer__link--item" routerLink="/faqs">FAQs</div>
-            <div class="footer__link--item" routerLink="/contact">
-              Contact Us
-            </div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
-            <div class="footer__link--item">Lorem</div>
+            <div class="footer__link--item">Home</div>
+            <div class="footer__link--item">About Us</div>
+            <div class="footer__link--item">Contact Us</div>
+            <!-- <div class="footer__link--item">Lorem</div>
+            <div class="footer__link--item">Lorem</div> -->
           </div>
           <div class="footer__link--grp">
+            <div class="footer__link--title">Our Offerings</div>
+            <div
+              class="footer__link--item"
+              routerLink="/products/round-containers"
+            >
+              Round Containers
+            </div>
+            <div class="footer__link--item" routerLink="/products/hdpe-bottles">
+              HDPE Bottles
+            </div>
+            <div class="footer__link--item" routerLink="/products/hdpe-toys">
+              HDPE Toys
+            </div>
+            <div class="footer__link--item" routerLink="/products/bopp-tapes">
+              BOPP Tapes
+            </div>
+            <div
+              class="footer__link--item"
+              routerLink="/products/paper-napkins"
+            >
+              Paper napkins
+            </div>
+            <!-- <div class="footer__link--item" routerLink="/faqs">Containers</div> -->
+          </div>
+          <!-- <div class="footer__link--grp">
             <div class="footer__link--title">Help</div>
             <div class="footer__link--item">Lorem</div>
             <div class="footer__link--item">Lorem</div>
             <div class="footer__link--item">Lorem</div>
             <div class="footer__link--item">Lorem</div>
             <div class="footer__link--item">Lorem</div>
-          </div>
+          </div> -->
         </div>
       </div>
 
       <div class="footer__right">
         <div class="footer__subscribe">
-          <div class="footer__subscribe--title">Subscribe</div>
+          <div class="footer__subscribe--title">Say hello!</div>
           <div class="footer__subscribe--input">
             <div class="input-group">
               <input
@@ -86,8 +101,7 @@
             </div>
           </div>
           <div class="footer__subscribe--description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            Want to discuss your requirements? Coonect with us on WhatsApp now!
           </div>
         </div>
       </div>
@@ -95,14 +109,16 @@
     <div class="footer__bottom">
       <div class="footer__bottom--left">
         <div class="footer__contact">
-          <button class="btn btn-primary">Contact Seller</button>
+          <button class="btn btn-primary" [routerLink]="'/contact'">
+            Contact Us
+          </button>
         </div>
       </div>
       <div class="footer__bottom--middle">
         <div class="footer__static-link">
-          <div class="footer__static-link--item">Privacy policy</div>
+          <!-- <div class="footer__static-link--item">Privacy policy</div>
           <div class="footer__static-link--item">Terms of use</div>
-          <div class="footer__static-link--item">Cookies</div>
+          <div class="footer__static-link--item">Cookies</div> -->
         </div>
       </div>
       <div class="footer__bottom--right">

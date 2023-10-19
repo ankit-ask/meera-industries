@@ -16,16 +16,28 @@ export class HeaderComponent {
       url: '/about',
     },
     {
-      title: 'Food Containers',
-      url: '/products/:food-containers',
+      title: 'Containers',
+      url: '/products/round-containers',
     },
     {
-      title: 'Bopp Tapes',
-      url: '/products/:bopp-tapes',
+      title: 'HDPE Bottles',
+      url: '/products/hdpe-bottles',
+    },
+    {
+      title: 'HDPE Toys',
+      url: '/products/hdpe-toys',
+    },
+    {
+      title: 'BOPP Tapes',
+      url: '/products/bopp-tapes',
     },
     {
       title: 'Paper Napkins',
-      url: '/products/:paper-napkins',
+      url: '/products/paper-napkins',
+    },
+    {
+      title: 'Contact',
+      url: '/contact',
     },
   ];
 }

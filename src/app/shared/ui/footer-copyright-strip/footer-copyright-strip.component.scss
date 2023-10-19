@@ -12,6 +12,10 @@
       display: flex;
       justify-content: center;
       font-family: "Inter", sans-serif;
+      a {
+        padding-left: $space-xxs;
+        color: $color-light;
+      }
     }
   }
 }
