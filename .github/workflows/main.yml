@@ -33,5 +33,4 @@ jobs:
           git checkout -b build-output
           git add dist/meera-industries/ -f
           git commit -m "Add build output"
-          git remote add origin_with_token https://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@github.com/ankit-ask/meera-industries.git
-          git push -u origin_with_token build-output
+          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
