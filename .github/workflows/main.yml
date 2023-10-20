@@ -36,8 +36,8 @@ jobs:
       #     git push https://aniket-modkar:@github.com/ankit-ask/meera-industries.git build-output
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          ACCESS_TOKEN: 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
-          BRANCH: gh-pages
-          FOLDER: dist/meera-industries
+          token: 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
+          branch: gh-pages
+          folder: dist/meera-industries
