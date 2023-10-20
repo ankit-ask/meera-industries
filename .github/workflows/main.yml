@@ -28,12 +28,12 @@ jobs:
 
       - name: Commit and Push Build
         run: |
-          git config --global user.email "aniketmodker24@gmail.com"
-          git config --global user.name "aniket-modkar"
+          git config --global user.email "ankit20september@gmail.com"
+          git config --global user.name "ankit-ask"
           git checkout -b build-output
           git add dist/meera-industries/ -f
           git commit -m "Add build output"
-          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
+          git push https://ankit-ask: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@github.com/ankit-ask/meera-industries.git build-output
 
       # - name: Deploy
       #   uses: JamesIves/github-pages-deploy-action@v4
