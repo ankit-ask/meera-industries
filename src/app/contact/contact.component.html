@@ -18,42 +18,58 @@
   <div class="contact__wrapper">
     <div class="contact__main">
       <div class="contact__main--header">Get in touch with us!</div>
-      <div class="contact__main--item-grp">
-        <div class="contact__main--item">
-          <label>First Name</label>
-          <input type="text" class="form-control" placeholder="" />
+      <form [formGroup]="contactFG">
+        <div class="contact__main--item-grp">
+          <div class="contact__main--item message">
+            <label>Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder=""
+              formControlName="fullName"
+            />
+          </div>
         </div>
-        <div class="contact__main--item">
-          <label>Last Name</label>
-          <input type="text" class="form-control" placeholder="" />
+        <div class="contact__main--item-grp">
+          <div class="contact__main--item">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder=""
+              formControlName="email"
+            />
+          </div>
+          <div class="contact__main--item">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              placeholder=""
+              formControlName="phoneNumber"
+            />
+          </div>
         </div>
-      </div>
-      <div class="contact__main--item-grp">
-        <div class="contact__main--item">
-          <label>Email</label>
-          <input type="email" class="form-control" placeholder="" />
+        <div class="contact__main--item-grp">
+          <div class="contact__main--item message">
+            <label>Your message</label>
+            <textarea
+              rows="3"
+              class="form-control"
+              placeholder="Your query here"
+              formControlName="message"
+            ></textarea>
+          </div>
         </div>
-        <div class="contact__main--item">
-          <label>Phone Number</label>
-          <input type="tel" class="form-control" placeholder="" />
+        <div class="contact__main--footer">
+          <div class="contact__main--footer-coupon"></div>
+          <div class="contact__main--footer-shopping">
+            <button class="btn btn-dark" (click)="submitForm()">
+              Send Message
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="contact__main--item-grp">
-        <div class="contact__main--item message">
-          <label>Your message</label>
-          <textarea
-            rows="3"
-            class="form-control"
-            placeholder="Your query here"
-          ></textarea>
-        </div>
-      </div>
-      <div class="contact__main--footer">
-        <div class="contact__main--footer-coupon"></div>
-        <div class="contact__main--footer-shopping">
-          <button class="btn btn-dark">Send Message</button>
-        </div>
-      </div>
+      </form>
       <!-- <img src="assets/images/dummy-product-03.png" alt=""> -->
     </div>
     <div class="contact__info">
@@ -76,9 +92,7 @@
       </div>
       <div class="contact__info--item">
         <div class="contact__info--item-label">Timings</div>
-        <div class="contact__info--item-value">
-          8:00AM - 10:00PM, Sunday Close
-        </div>
+        <div class="contact__info--item-value">Mon - Sat : 9:00AM - 6:00PM</div>
       </div>
     </div>
   </div>

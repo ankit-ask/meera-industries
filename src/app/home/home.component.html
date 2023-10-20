@@ -6,27 +6,22 @@
       <div class="banner__item">
         <div class="banner__item--media">
           <img
-            [src]="false ? '' : 'assets/images/dummy-product-01.png'"
+            [src]="false ? '' : 'assets/images/fresh-food.jpg'"
             alt="Banner Image"
           />
         </div>
         <div class="banner__item--info horizontal">
           <div class="banner__item--info-left">
-            <div class="banner__item--info-title">
-              {{ "" || "Marketing Message Here" | titlecase }}
-            </div>
+            <div class="banner__item--info-title">About Us</div>
             <div class="banner__item--info-description">
-              {{
-                "" ||
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-                  | titlecase
-              }}
+              We are the leading manufacturer of Plastic Containers and BOPP
+              Tapes in Central India.
             </div>
           </div>
-          <div class="banner__item--info-right">
+          <!-- <div class="banner__item--info-right">
             <span>Shop Now</span>
             <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -74,27 +69,27 @@
 
   <div class="bestseller">
     <div class="bestseller__header">
-      <div class="bestseller__header--title">Shop Best Seller</div>
-      <div class="bestseller__header--action">
+      <div class="bestseller__header--title">Our Best Sellers</div>
+      <!-- <div class="bestseller__header--action">
         <span>Show All</span>
         <img src="assets/icons/arrow_right_purple.png" alt="Arrow Right Icon" />
-      </div>
+      </div> -->
     </div>
     <div class="bestseller__list">
       <div
         class="bestseller__item col-sm-6 col-md-4 col-lg-3"
-        *ngFor="let item of [].constructor(4)"
+        *ngFor="let item of bestSellerProducts"
       >
-        <app-item-card></app-item-card>
+        <app-item-card [product]="item"></app-item-card>
       </div>
     </div>
   </div>
 
   <div class="category__wrapper">
-    <div class="category__header">Shop By Category</div>
+    <div class="category__header">Find By Category</div>
     <div class="category__list">
       <div class="category__item first">
-        <div class="category__item--label">All New Arrivals</div>
+        <div class="category__item--label">Explore our products</div>
         <div class="category__item--action">
           <span>Discover</span>
           <img src="assets/icons/arrow_right.png" alt="Arrow Right Icon" />
@@ -102,13 +97,14 @@
       </div>
       <div
         class="category__item"
-        *ngFor="let item of [].constructor(5); index as i"
+        *ngFor="let item of categories; index as i"
+        [routerLink]="item.reditectURL"
       >
         <div class="category__item--media">
-          <img src="assets/images/dummy-product-03.png" alt="Category Image" />
+          <img [src]="item.media" alt="Category Image" />
         </div>
         <div class="category__item--title">
-          <span> Category {{ i + 1 }} </span>
+          <span> {{ item.title }} </span>
         </div>
       </div>
     </div>
@@ -138,14 +134,14 @@
     <div class="top-picks__list">
       <div
         class="top-picks__item--wrapper col-sm-6 col-md-6 col-lg-3"
-        *ngFor="let item of [].constructor(4)"
+        *ngFor="let item of newProducts"
       >
         <div class="top-picks__item">
-          <app-item-card></app-item-card>
+          <app-item-card [product]="item"></app-item-card>
         </div>
       </div>
     </div>
-    <div class="top-picks__list">
+    <!-- <div class="top-picks__list">
       <div
         class="top-picks__item--wrapper col-sm-6 col-md-6 col-lg-3"
         *ngFor="let item of [].constructor(4)"
@@ -154,10 +150,10 @@
           <app-item-card></app-item-card>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
-  <div class="service__wrapper">
+  <!-- <div class="service__wrapper">
     <div class="service__header">What We Offer</div>
 
     <div class="service__list">
@@ -177,5 +173,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

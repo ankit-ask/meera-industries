@@ -24,11 +24,11 @@ export class ProductListComponent {
     'Paper Napkins',
   ];
   categorySubtitle = [
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetu',
+    'We are the leading manufacturers and suppliers of Disposable Plastic Products which are recyclable and available in various shapes and sizes. We are also the pioneers among the major Disposable Food Containers Exporters. The products are known for their quality and affordability in Central India.',
+    'We have wide variety of HBPE Bottles in differnet colors. Customized printed bottles also available.',
+    'We have wide variety of HDPE Toys in differnet colors. Customization options are also available.',
+    'We have wide variety of Bopp Tapes in differnet colors. Customized printed tapes also available.',
+    'We have wide variety of Paper Napkins in differnet colors. Customized printed napkins also available.',
   ];
 
   products = [
@@ -100,17 +100,17 @@ export class ProductListComponent {
           {
             name: '300 ML Dishwasher',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Dishwasher.png',
           },
           {
             name: '300 S Dishwasher',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/dishwasher-1.png',
           },
           {
             name: '500 ML Dishwasher',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Dishwasher-500ml.png',
           },
         ],
       },
@@ -125,17 +125,17 @@ export class ProductListComponent {
           {
             name: '100 ML Bottle',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/blow-bottle-1.png',
           },
           {
             name: '50 ML Glycerine Bottle',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/gems-bottle-1.png',
           },
           {
             name: '100 ML Glycerine Bottle',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Hydrogen-peroxide-Bottle.png',
           },
         ],
       },
@@ -150,17 +150,17 @@ export class ProductListComponent {
           {
             name: 'Panda Toys',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/toys.png',
           },
           {
             name: 'Vampire Toys',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/toys.png',
           },
           {
             name: 'Teddy Gems Bottle',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/toys.png',
           },
         ],
       },
@@ -175,22 +175,22 @@ export class ProductListComponent {
           {
             name: 'Transparent Tapes',
             description: '',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Tape-2.png',
           },
           {
             name: 'Brown Tapes',
             description: '',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Tape-3.png',
           },
           {
             name: 'Printed Tapes',
             description: 'Customized options available',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Tape-4.png',
           },
           {
             name: 'Coloured Tapes',
             description: '',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/Tape-6.png',
           },
         ],
       },
@@ -205,22 +205,22 @@ export class ProductListComponent {
           {
             name: 'Hard Paper Napkin',
             description: 'Available in different sizes',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/soft-tissue-paper-napkin.png',
           },
           {
             name: 'Soft paper Napkin',
             description: 'Available in different sizes',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/soft-tissue-paper-napkin.png',
           },
           {
             name: '2 Ply Paper Napkin',
             description: 'Available in different sizes',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/soft-tissue-paper-napkin.png',
           },
           {
             name: 'Value Pack',
             description: 'Get the best offers',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/soft-tissue-paper-napkin.png',
           },
         ],
       },

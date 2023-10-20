@@ -14,6 +14,8 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { HeroBannerComponent } from './shared/ui/hero-banner/hero-banner.component';
 import { HeaderTopStripComponent } from './shared/ui/header-top-strip/header-top-strip.component';
 import { OfferBannerComponent } from './shared/ui/offer-banner/offer-banner.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,14 +29,17 @@ import { OfferBannerComponent } from './shared/ui/offer-banner/offer-banner.comp
     ProductListComponent,
     HeroBannerComponent,
     HeaderTopStripComponent,
-    OfferBannerComponent
+    OfferBannerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
