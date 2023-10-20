@@ -26,11 +26,18 @@ jobs:
           npm install
           ng build --aot --output-hashing=all
 
-      - name: Commit and Push Build
-        run: |
-          git config --global user.email "aniketmodker24@gmail.com"
-          git config --global user.name "aniket-modkar"
-          git checkout -b build-output
-          git add dist/meera-industries/ -f
-          git commit -m "Add build output"
-          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
+      # - name: Commit and Push Build
+      #   run: |
+      #     git config --global user.email "aniketmodker24@gmail.com"
+      #     git config --global user.name "aniket-modkar"
+      #     git checkout -b build-output
+      #     git add dist/meera-industries/ -f
+      #     git commit -m "Add build output"
+      #     git push https://aniket-modkar:@github.com/ankit-ask/meera-industries.git build-output
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: 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
+          BRANCH: gh-pages
+          FOLDER: dist/meera-industries
