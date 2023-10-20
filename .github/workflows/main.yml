@@ -24,7 +24,7 @@ jobs:
       - name: Build Angular App
         run: |
           npm install
-          ng build --aot --output-hashing=all --output-path=docs
+          ng build --output-path=docs
 
       - name: Commit and Push Build
         run: |
