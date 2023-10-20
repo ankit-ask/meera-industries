@@ -38,6 +38,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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
           BRANCH: gh-pages
           FOLDER: dist/meera-industries
