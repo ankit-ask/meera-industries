@@ -33,7 +33,7 @@ jobs:
           git checkout -b build-output
           git add dist/meera-industries/ -f
           git commit -m "Add build output"
-          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
+          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
 
       # - name: Deploy
       #   uses: JamesIves/github-pages-deploy-action@v4
