@@ -40,22 +40,22 @@ export class ProductListComponent {
           {
             name: '1200 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/1200ml.png',
           },
           {
             name: '1000 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/1000ml.png',
           },
           {
             name: '750 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/600ml.png',
           },
           {
             name: '600 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/600ml.png',
           },
           {
             name: '500 ML - Round Container',
@@ -70,27 +70,27 @@ export class ProductListComponent {
           {
             name: '300 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/300ml.png',
           },
           {
             name: '300 New - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/250ml.png',
           },
           {
             name: '300 S - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/300ml.png',
           },
           {
             name: '250 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/250ml.png',
           },
           {
             name: '100 ML - Round Container',
             description: 'Customized colors avaialble',
-            media: 'assets/images/products/500ml.png',
+            media: 'assets/images/products/100ml.png',
           },
         ],
       },
