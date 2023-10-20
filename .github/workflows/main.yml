@@ -1,0 +1,43 @@
+name: Deploy Angular App
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+ 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
+      - name: Build Angular App
+        run: |
+          npm install
+          ng build --aot --output-hashing=all
+
+      - name: Commit and Push Build
+        run: |
+          git config --global user.email "ankit20september@gmail.com"
+          git config --global user.name "ankit-ask"
+          git checkout -b build-output
+          git add dist/meera-industries/ -f
+          git commit -m "Add build output"
+          git push https://ankit-ask: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@github.com/ankit-ask/meera-industries.git build-output
+
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     token: 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
+      #     branch: gh-pages
+      #     folder: dist/meera-industries
