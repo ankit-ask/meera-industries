@@ -24,7 +24,7 @@ jobs:
       - name: Build Angular App
         run: |
           npm install
-          ng build --output-path=docs --base-href /meera-industries/
+          ng build --output-path=docs
 
       - name: Commit and Push Build
         run: |
