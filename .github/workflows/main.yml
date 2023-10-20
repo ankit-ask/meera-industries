@@ -26,18 +26,18 @@ jobs:
           npm install
           ng build --aot --output-hashing=all
 
-      # - name: Commit and Push Build
-      #   run: |
-      #     git config --global user.email "aniketmodker24@gmail.com"
-      #     git config --global user.name "aniket-modkar"
-      #     git checkout -b build-output
-      #     git add dist/meera-industries/ -f
-      #     git commit -m "Add build output"
-      #     git push https://aniket-modkar:@github.com/ankit-ask/meera-industries.git build-output
+      - name: Commit and Push Build
+        run: |
+          git config --global user.email "aniketmodker24@gmail.com"
+          git config --global user.name "aniket-modkar"
+          git checkout -b build-output
+          git add dist/meera-industries/ -f
+          git commit -m "Add build output"
+          git push https://aniket-modkar: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@github.com/ankit-ask/meera-industries.git build-output
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: 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
-          branch: gh-pages
-          folder: dist/meera-industries
+      # - name: Deploy
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     token: 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
+      #     branch: gh-pages
+      #     folder: dist/meera-industries
