@@ -33,7 +33,7 @@ jobs:
           git checkout -b build-output
           git add docs/ -f
           git commit -m "Add build output"
-          git pull origin build-ouput
+          git pull origin build-output
           git push https://ankit-ask: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@github.com/ankit-ask/meera-industries.git build-output
 
       # - name: Deploy
