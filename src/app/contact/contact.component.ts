@@ -31,7 +31,8 @@ export class ContactComponent {
   }
 
   submitForm() {
-    const endpoint = 'http://apis.technomize.com/api/v1/notification/sendEmail';
+    const endpoint =
+      'https://apis.technomize.com/api/v1/notification/sendEmail';
 
     console.log(this.contactFG.value);
 
@@ -52,6 +53,7 @@ export class ContactComponent {
     this.httpClient.post<any>(endpoint, { to, subject, body }).subscribe({
       next: (response) => {
         console.log(response);
+        this.contactFG.reset();
         alert(
           'Thank you for showing your interest. Our team will get back to you soon!'
         );
