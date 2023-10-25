@@ -4,6 +4,10 @@
       <div class="header__brand" routerLink="/">
         <img src="assets/images/logo.png" alt="Brand Logo" />
       </div>
+      <div class="header__toggle mobile-only" (click)="toggleMenu()">
+        <i class="bi bi-list" *ngIf="!showMenu"></i>
+        <i class="bi bi-x-lg" *ngIf="showMenu"></i>
+      </div>
       <!-- <div class="header__search desktop-only">
           <img src="assets/icons/search.png" alt="Search Icon" />
           <input
@@ -13,12 +17,12 @@
             (keydown.enter)="searchProducts($event)"
           />
         </div> -->
-      <div class="header__action">
+      <div class="header__action" [ngClass]="showMenu ? '' : 'desktop-only'">
         <div
           class="header__action--item c-pointer"
           *ngFor="let menuItem of menuItems"
-          [routerLink]="menuItem.url"
           [routerLinkActive]="'active'"
+          (click)="goToPage(menuItem.url)"
         >
           <!-- <img src="assets/icons/user.png" alt="User Icon" /> -->
           <span>{{ menuItem.title }}</span>

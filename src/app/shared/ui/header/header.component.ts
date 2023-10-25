@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  constructor(private _router: Router) {}
+
+  showMenu = false;
   menuItems = [
     {
       title: 'Home',
@@ -40,4 +44,13 @@ export class HeaderComponent {
       url: '/contact',
     },
   ];
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  goToPage(url: string) {
+    this._router.navigate([url]);
+    this.showMenu = false;
+  }
 }
