@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "meera-industries:build:production"
+              "buildTarget": "meera-industries:build:production"
             },
             "development": {
-              "browserTarget": "meera-industries:build:development"
+              "buildTarget": "meera-industries:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "meera-industries:build"
+            "buildTarget": "meera-industries:build"
           }
         },
         "test": {
@@ -106,5 +106,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
