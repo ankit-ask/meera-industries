@@ -32,8 +32,8 @@ export class HeaderComponent {
       url: '/products/paper-napkins',
     },
     {
-      title: 'name',
-      url: '/products/hdpe-bottles',
+      title: 'Printing & Packaging',
+      url: '/products/print-packaging',
     },
     {
       title: 'Aluminium Foils',

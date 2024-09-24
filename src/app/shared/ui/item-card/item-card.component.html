@@ -26,7 +26,7 @@
       <div class="item-card__info--price">
         <!-- <span>₹{{ product?.price || "99" }}</span>
         {{ product?.price || "89" }} -->
-        <button class="btn btn-primary btn-dark">Get Price</button>
+        <button  (click)="openWhatsapp(product?.name)" class="btn btn-primary btn-dark">Get Price</button>
       </div>
     </div>
     <div class="item-card__colors">

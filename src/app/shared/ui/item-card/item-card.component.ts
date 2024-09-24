@@ -15,4 +15,10 @@ export class ItemCardComponent {
   // };
 
   goToProductDetails() {}
+  openWhatsapp(productName: string) {
+    window.open(
+      `https://api.whatsapp.com/send/?phone=%2B919977403008&text=Hi%21%21+I+would+like+to+know+more+about+your+products+${productName}!&type=phone_number&app_absent=0`,
+      '_blank'
+    );
+  }
 }

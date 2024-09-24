@@ -23,9 +23,9 @@ export class HomeComponent {
       reditectURL: '/products/paper-napkins',
     },
     {
-      title: 'name',
+      title: 'Printing & Packaging',
       media: 'assets/images/categories/container.png',
-      reditectURL: '/products/hdpe-bottles',
+      reditectURL: '/products/print-packaging',
     },
     {
       title: 'Aluminium Foils',
