@@ -20,8 +20,24 @@ export class HeaderComponent {
       url: '/about',
     },
     {
-      title: 'Containers',
+      title: 'Food Containers',
       url: '/products/round-containers',
+    },
+    {
+      title: 'Wonder Tapes',
+      url: '/products/wonder-tapes',
+    },
+    {
+      title: 'Paper Napkins',
+      url: '/products/paper-napkins',
+    },
+    {
+      title: 'Printing & Packaging',
+      url: '/products/print-packaging',
+    },
+    {
+      title: 'Aluminium Foils',
+      url: '/products/aluminium-foil',
     },
     {
       title: 'HDPE Bottles',
@@ -31,14 +47,7 @@ export class HeaderComponent {
       title: 'HDPE Toys',
       url: '/products/hdpe-toys',
     },
-    {
-      title: 'BOPP Tapes',
-      url: '/products/bopp-tapes',
-    },
-    {
-      title: 'Paper Napkins',
-      url: '/products/paper-napkins',
-    },
+
     {
       title: 'Contact',
       url: '/contact',

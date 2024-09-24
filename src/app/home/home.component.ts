@@ -8,9 +8,29 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   categories = [
     {
-      title: 'Containers',
+      title: 'Food Containers',
       media: 'assets/images/categories/container.png',
       reditectURL: '/products/round-containers',
+    },
+    {
+      title: 'Wonder Tapes',
+      media: 'assets/images/categories/container.png',
+      reditectURL: '/products/wonder-tapes',
+    },
+    {
+      title: 'Paper Napkins',
+      media: 'assets/images/categories/container.png',
+      reditectURL: '/products/paper-napkins',
+    },
+    {
+      title: 'Printing & Packaging',
+      media: 'assets/images/categories/container.png',
+      reditectURL: '/products/print-packaging',
+    },
+    {
+      title: 'Aluminium Foils',
+      media: 'assets/images/categories/container.png',
+      reditectURL: '/products/aluminium-foil',
     },
     {
       title: 'HDPE Bottles',
@@ -21,16 +41,6 @@ export class HomeComponent {
       title: 'HDPE Toys',
       media: 'assets/images/categories/container.png',
       reditectURL: '/products/hdpe-toys',
-    },
-    {
-      title: 'BOPP Tapes',
-      media: 'assets/images/categories/container.png',
-      reditectURL: '/products/bopp-tapes',
-    },
-    {
-      title: 'Paper Napkins',
-      media: 'assets/images/categories/container.png',
-      reditectURL: '/products/paper-napkins',
     },
   ];
 

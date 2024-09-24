@@ -20,15 +20,19 @@ export class ProductListComponent {
     'Round Containers',
     'HDPE Bottles',
     'HDPE Toys',
-    'BOPP Tapes',
+    'Wonder Tapes',
     'Paper Napkins',
+    'Aluminium Foils',
+    'Printing And Packaging',
   ];
   categorySubtitle = [
     'We are the leading manufacturers and suppliers of Disposable Plastic Products which are recyclable and available in various shapes and sizes. We are also the pioneers among the major Disposable Food Containers Exporters. The products are known for their quality and affordability in Central India.',
     'We have wide variety of HBPE Bottles in differnet colors. Customized printed bottles also available.',
     'We have wide variety of HDPE Toys in differnet colors. Customization options are also available.',
-    'We have wide variety of Bopp Tapes in differnet colors. Customized printed tapes also available.',
+    'We have wide variety of Wonder Tapes in differnet colors. Customized printed tapes also available.',
     'We have wide variety of Paper Napkins in differnet colors. Customized printed napkins also available.',
+    'We have wide variety of Aluminium Foils in differnet sizes. Customized options are also available.',
+    'We have wide variety of Printing And Packaging in differnet items. Customized options are also available.',
   ];
 
   products = [
@@ -226,6 +230,64 @@ export class ProductListComponent {
       },
     ],
     //ENDS: Paper Napkins
+    //BEGINS: Aluminium Foil
+    [
+      {
+        subCategory: 'Default',
+        items: [
+          {
+            name: 'Food Grade Aluminium Foil',
+            description: 'Available in different sizes',
+            media: 'assets/images/foil.jpg',
+          },
+          {
+            name: 'Standard Aluminum Foil',
+            description: 'Available in different sizes',
+            media: 'assets/images/foil.jpg',
+          },
+          {
+            name: 'Chocolate Foil',
+            description: 'Available in different sizes',
+            media: 'assets/images/foil.jpg',
+          },
+          {
+            name: 'Aluminum strip pack foil',
+            description: 'Get the best offers',
+            media: 'assets/images/foil.jpg',
+          },
+        ],
+      },
+    ],
+    //ENDS: Aluminium Foil
+    //BEGINS: Print & Packaging
+    [
+      {
+        subCategory: 'Default',
+        items: [
+          {
+            name: 'Flexography',
+            description: 'Available in different sizes',
+            media: 'assets/images/printing-in-packaging.jpg',
+          },
+          {
+            name: 'Offset Printing',
+            description: 'Available in different sizes',
+            media: 'assets/images/printing-in-packaging.jpg',
+          },
+          {
+            name: ' Gravure',
+            description: 'Available in different sizes',
+            media: 'assets/images/printing-in-packaging.jpg',
+          },
+          {
+            name: 'Digital printing',
+            description: 'Get the best offers',
+            media: 'assets/images/printing-in-packaging.jpg',
+          },
+        ],
+      },
+    ],
+    //ENDS: Print & Packaging
   ];
 
   categoryIndex!: number;
@@ -259,12 +321,20 @@ export class ProductListComponent {
         this.categoryIndex = 2;
         break;
       }
-      case 'bopp-tapes': {
+      case 'wonder-tapes': {
         this.categoryIndex = 3;
         break;
       }
       case 'paper-napkins': {
         this.categoryIndex = 4;
+        break;
+      }
+      case 'aluminium-foil': {
+        this.categoryIndex = 5;
+        break;
+      }
+      case 'print-packaging': {
+        this.categoryIndex = 6;
         break;
       }
       default: {
